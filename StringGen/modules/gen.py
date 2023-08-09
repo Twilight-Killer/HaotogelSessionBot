@@ -46,12 +46,12 @@ async def gen_session(
     else:
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
 
-    await message.reply_text(f"» ᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ {ty} sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ...")
+    await message.reply_text(f"» ᴍᴇɴᴄᴏʙᴀ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ {ty} sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ...")
 
     try:
         api_id = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴀᴘɪ ɪᴅ ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ :",
+            text="» ᴛᴏʟᴏɴɢ ᴍᴀꜱᴜᴋᴋᴀɴ ᴀᴘɪ ɪᴅ ᴍᴜ ᴜɴᴛᴜᴋ ᴘʀᴏꜱᴇꜱ :",
             filters=filters.text,
             timeout=300,
         )
