@@ -9,7 +9,7 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=SUPPORT_CHAT),
             InlineKeyboardButton(
-                text="sᴏᴜʀᴄᴇ", url="https://github.com/AnonymousX1025/StringGenBot"
+                text="sᴏᴜʀᴄᴇ", url="https://t.me/HaoTogelLivedraw"
             ),
         ],
     ]
@@ -26,5 +26,5 @@ gen_key = InlineKeyboardMarkup(
 )
 
 retry_key = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="ᴛʀʏ ᴀɢᴀɪɴ", callback_data="gensession")]]
+    [[InlineKeyboardButton(text="ᴄᴏʙᴀ ʟᴀɢɪ", callback_data="gensession")]]
 )
