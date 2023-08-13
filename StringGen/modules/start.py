@@ -8,7 +8,7 @@ from StringGen.utils import add_served_user, keyboard
 @Anony.on_message(filters.command("start") & filters.private & filters.incoming)
 async def f_start(_, message: Message):
     await message.reply_text(
-        text=f"ʜᴇʏ {message.from_user.first_name},\n\n {Anony.mention},\nᴅɪ ʙᴜᴀᴛ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀɴᴛᴜ ᴀɴᴅᴀ ᴍᴇɴɢᴀᴍʙɪʟ sᴛʀɪɴɢ sᴇssɪᴏɴ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ ᴅᴀɴ ᴀᴍᴀɴ\n•––––––––☆–––––––––•\nsɪʟᴀʜᴋᴀɴ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴍᴇɴɢᴀᴍʙɪʟ sᴛʀɪɴɢ sᴇssɪᴏɴ!\n•––––––––☆–––––––––•\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ @HaoTogelLivedraw",
+        text=f"ʜᴇʏ {message.from_user.first_name}\n\n{Anony.mention}\nᴅɪ ʙᴜᴀᴛ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀɴᴛᴜ ᴀɴᴅᴀ ᴍᴇɴɢᴀᴍʙɪʟ sᴛʀɪɴɢ sᴇssɪᴏɴ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ ᴅᴀɴ ᴀᴍᴀɴ\n•––––––––☆–––––––––•\nsɪʟᴀʜᴋᴀɴ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴍᴇɴɢᴀᴍʙɪʟ sᴛʀɪɴɢ sᴇssɪᴏɴ !\n•––––––––☆–––––––––•\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ @HaoTogelLivedraw",
         reply_markup=keyboard,
         disable_web_page_preview=True,
     )
