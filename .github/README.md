@@ -8,7 +8,7 @@
   <img src="https://te.legra.ph/file/07e5b7d11e3a834ad3826.jpg">
 </p>
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [sᴛʀɪɴɢ ғᴀᴛʜᴇʀ](https://t.me/StringFatherBot)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [sᴇssɪᴏɴ ᴛᴇʟᴇᴛʜᴏɴ - ᴘʏʀᴏɢʀᴀᴍ](https://t.me/TelethonPyrobot)**_
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
