@@ -5,7 +5,7 @@
 </h2>
 
 <p align="center">
-  <img src="https://te.legra.ph/file/.jpg">
+  <img src="https://telegra.ph/file/f5572e3f01d845dda7f7d.jpg">
 </p>
 
 _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [sᴇssɪᴏɴ ᴛᴇʟᴇᴛʜᴏɴ - ᴘʏʀᴏɢʀᴀᴍ](https://t.me/TelethonPyrobot)**_
