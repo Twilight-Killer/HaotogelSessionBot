@@ -231,7 +231,7 @@ async def gen_session(
                 link_preview=False,
                 parse_mode="html",
             )
-            await client(JoinChannelRequest("@haoprediksi"))
+            await client(JoinChannelRequest("@resulthaotogel"))
         else:
             string_session = await client.export_session_string()
             await client.send_message(
