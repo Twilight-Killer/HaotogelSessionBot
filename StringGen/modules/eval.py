@@ -69,7 +69,7 @@ async def executor(client: Anony, message: Message):
     elif stdout:
         evaluation += stdout
     else:
-        evaluation += "Success"
+        evaluation += "Sukses"
     final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation}</pre>"
     if len(final_output) > 4096:
         filename = "output.txt"
