@@ -46,7 +46,7 @@ async def gen_session(
     else:
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
 
-    await message.reply_text(f"» Memulai {ty} session generator...")
+    await message.reply_text(f"» Memulai {ty} string session generator...")
 
     try:
         api_id = await Anony.ask(
