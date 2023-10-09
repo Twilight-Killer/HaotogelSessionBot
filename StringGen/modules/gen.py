@@ -46,12 +46,12 @@ async def gen_session(
     else:
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
 
-    await message.reply_text(f"» Mencoba untuk memulai {ty} session generator...")
+    await message.reply_text(f"» Memulai {ty} session generator...")
 
     try:
         api_id = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» Tolong masukkan API_ID :",
+            text="» Masukkan API_ID kamu :",
             filters=filters.text,
             timeout=300,
         )
@@ -70,14 +70,14 @@ async def gen_session(
     except ValueError:
         return await Anony.send_message(
             user_id,
-            "» API_ID yang kamu kirimkan salah.\n\ntolong mulai ulang string session dari awal.",
+            "» API_ID yang kamu kirimkan salah.\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
 
     try:
         api_hash = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» Tolong masukkan API HASH :",
+            text="» Masukkan API HASH kamu :",
             filters=filters.text,
             timeout=300,
         )
@@ -96,14 +96,14 @@ async def gen_session(
     if len(api_hash) < 30:
         return await Anony.send_message(
             user_id,
-            "» API_HASH yang kamu kirimkan salah.\n\ntolong mulai ulang string session dari awal.",
+            "» API_HASH yang kamu kirimkan salah.\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
 
     try:
         phone_number = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» Tolong masukkan nomor telp :",
+            text="» Masukkan nomor telp kamu :",
             filters=filters.text,
             timeout=300,
         )
@@ -143,20 +143,20 @@ async def gen_session(
     except (ApiIdInvalid, ApiIdInvalidError, ApiIdInvalid1):
         return await Anony.send_message(
             user_id,
-            "» API_ID atau API_HASH salah.\n\ntolong mulai ulang string session dari awal.",
+            "» API_ID atau API_HASH salah.\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
     except (PhoneNumberInvalid, PhoneNumberInvalidError, PhoneNumberInvalid1):
         return await Anony.send_message(
             user_id,
-            "» Nomor telp salah.\n\ntolong mulai ulang string session dari awal.",
+            "» Nomor telp salah.\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
 
     try:
         otp = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text=f"Kirimkan kode OTP yang diterima {phone_number}.\n\nseperti ini <code>12345</code>, dan tolong kirim kode OTP tersebut dengan spasi seperti contoh ini <code>1 2 3 4 5.</code>",
+            text=f"Kirimkan kode OTP yang diterima {phone_number}.\n\Seperti ini <code>12345</code>, dan tolong kirim kode OTP tersebut dengan spasi seperti contoh <code>1 2 3 4 5</code>",
             filters=filters.text,
             timeout=600,
         )
@@ -178,13 +178,13 @@ async def gen_session(
     except (PhoneCodeInvalid, PhoneCodeInvalidError, PhoneCodeInvalid1):
         return await Anony.send_message(
             user_id,
-            "» kode OTP yang kamu kirimkan <b>salah.</b>\n\ntolong mulai ulang string session dari awal.",
+            "» kode OTP yang kamu kirimkan <b>salah.</b>\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
     except (PhoneCodeExpired, PhoneCodeExpiredError, PhoneCodeExpired1):
         return await Anony.send_message(
             user_id,
-            "» kode OTP yang kamu kirimkan <b>kadaluarsa.</b>\n\ntolong mulai ulang string session dari awal.",
+            "» kode OTP yang kamu kirimkan <b>kadaluarsa.</b>\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
     except (SessionPasswordNeeded, SessionPasswordNeededError, SessionPasswordNeeded1):
@@ -198,7 +198,7 @@ async def gen_session(
         except ListenerTimeout:
             return Anony.send_message(
                 user_id,
-                "» ᴛɪᴍᴇᴅ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 5 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+                "» Batas waktu mencapai 5 menit.\n\nTolong mulai ulang string session dari awal.",
                 reply_markup=retry_key,
             )
 
@@ -214,7 +214,7 @@ async def gen_session(
         except (PasswordHashInvalid, PasswordHashInvalidError, PasswordHashInvalid1):
             return await Anony.send_message(
                 user_id,
-                "» ᴛʜᴇ ᴩᴀssᴡᴏʀᴅ ʏᴏᴜ'ᴠᴇ sᴇɴᴛ ɪs ᴡʀᴏɴɢ.\n\nᴩʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+                "» Password yang kamu kirimkan salah.\n\nTolong mulai ulang string session dari awal.",
                 reply_markup=retry_key,
             )
 
@@ -222,7 +222,7 @@ async def gen_session(
         return await Anony.send_message(user_id, f"ᴇʀʀᴏʀ : <code>{str(ex)}</code>")
 
     try:
-        txt = "ʜᴇʀᴇ ɪs ʏᴏᴜʀ {0} sᴛʀɪɴɢ sᴇssɪᴏɴ\n\n<code>{1}</code>\n\nᴀ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ ʙʏ <a href={2}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>\n☠ <b>ɴᴏᴛᴇ :</b> ᴅᴏɴ'ᴛ sʜᴀʀᴇ ɪᴛ ᴡɪᴛʜ ʏᴏᴜʀ ɢɪʀʟғʀɪᴇɴᴅ."
+        txt = "Ini adalah {0} string session\n\n<code>{1}</code>\n\nString generator bot by <a href={2}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>\n☠ <b>Note :</b> Jangan kamu bagikan ke siapapun."
         if telethon:
             string_session = client.session.save()
             await client.send_message(
@@ -231,7 +231,7 @@ async def gen_session(
                 link_preview=False,
                 parse_mode="html",
             )
-            await client(JoinChannelRequest("@resulthaotogel"))
+            await client(JoinChannelRequest("haotogel_result"))
         else:
             string_session = await client.export_session_string()
             await client.send_message(
@@ -246,7 +246,7 @@ async def gen_session(
         await client.disconnect()
         await Anony.send_message(
             chat_id=user_id,
-            text=f"sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ ʏᴏᴜʀ {ty} sᴛʀɪɴɢ sᴇssɪᴏɴ.\n\nᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ғᴏʀ ɢᴇᴛᴛɪɴɢ ɪᴛ.\n\nᴀ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ ʙʏ <a href={SUPPORT_CHAT}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>.",
+            text=f"Sukses generate {ty} string session.\n\nSilakan periksa di pesan tersimpan untuk melihatnya.\n\nString generator by <a href={SUPPORT_CHAT}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
