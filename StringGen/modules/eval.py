@@ -70,7 +70,7 @@ async def executor(client: Anony, message: Message):
         evaluation += stdout
     else:
         evaluation += "Sukses"
-    final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation}</pre>"
+    final_output = f"<b>⥤ Hasil :</b>\n<pre language='python'>{evaluation}</pre>"
     if len(final_output) > 4096:
         filename = "output.txt"
         with open(filename, "w+", encoding="utf8") as out_file:
@@ -81,14 +81,14 @@ async def executor(client: Anony, message: Message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {t2-t1} Seconds",
+                        callback_data=f"runtime {t2-t1} Detik",
                     )
                 ]
             ]
         )
         await message.reply_document(
             document=filename,
-            caption=f"<b>⥤ ᴇᴠᴀʟ :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ ʀᴇsᴜʟᴛ :</b>\nAttached Document",
+            caption=f"<b>⥤ Eval :</b>\n<code>{cmd[0:980]}</code>\n\n<b>⥤ Hasil :</b>\nAttached Document",
             quote=False,
             reply_markup=keyboard,
         )
@@ -101,7 +101,7 @@ async def executor(client: Anony, message: Message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {round(t2-t1, 3)} Seconds",
+                        callback_data=f"runtime {round(t2-t1, 3)} Detik",
                     ),
                     InlineKeyboardButton(
                         text="🗑",
