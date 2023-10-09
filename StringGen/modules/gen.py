@@ -156,7 +156,7 @@ async def gen_session(
     try:
         otp = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text=f"Kirimkan kode OTP yang diterima {phone_number}.\n\Contoh <code>12345</code>. Lalu tolong kirim kode OTP tersebut dengan spasi seperti contoh <code>1 2 3 4 5</code>",
+            text=f"Kirimkan ke saya kode OTP yang diterima {phone_number}.\n\nContoh <code>12345</code>. lalu tolong kirim kode OTP tersebut dengan spasi seperti contoh <code>1 2 3 4 5</code>",
             filters=filters.text,
             timeout=600,
         )
@@ -222,7 +222,7 @@ async def gen_session(
         return await Anony.send_message(user_id, f"ᴇʀʀᴏʀ : <code>{str(ex)}</code>")
 
     try:
-        txt = "Ini adalah {0} string session\n\n<code>{1}</code>\n\nString generator bot by <a href={2}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>\n☠ <b>Note :</b> Jangan kamu bagikan ke siapapun."
+        txt = "ini adalah {0} string session kamu.\n\n<code>{1}</code>\n\nString session by : <a href={2}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>\n☠ <b>Note :</b> Jangan kamu bagikan ke siapapun."
         if telethon:
             string_session = client.session.save()
             await client.send_message(
@@ -246,12 +246,12 @@ async def gen_session(
         await client.disconnect()
         await Anony.send_message(
             chat_id=user_id,
-            text=f"Sukses generate {ty} string session.\n\nSilakan periksa di pesan tersimpan untuk melihatnya.\n\nString generator by <a href={SUPPORT_CHAT}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>.",
+            text=f"Sukses generate {ty} string session.\n\nSilakan periksa dipesan tersimpan untuk melihatnya.\n\nString session by : <a href={SUPPORT_CHAT}>ʜᴀᴏᴛᴏɢᴇʟ ʟɪᴠᴇ ᴅʀᴀᴡ ᴀᴛ ᴅᴜɴɪᴀ ᴛᴏɢᴇʟ ᴏꜰꜰɪᴄɪᴀʟ</a>.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs",
+                            text="Pesan tersimpan",
                             url=f"tg://openmessage?user_id={user_id}",
                         )
                     ]
