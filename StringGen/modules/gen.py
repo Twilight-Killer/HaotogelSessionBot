@@ -58,7 +58,7 @@ async def gen_session(
     except ListenerTimeout:
         return await Anony.send_message(
             user_id,
-            "» ᴛɪᴍᴇᴅ ʟɪᴍɪᴛ ʀᴇᴀᴄʜᴇᴅ ᴏғ 5 ᴍɪɴᴜᴛᴇs.\n\nᴘʟᴇᴀsᴇ sᴛᴀʀᴛ ɢᴇɴᴇʀᴀᴛɪɴɢ sᴇssɪᴏɴ ᴀɢᴀɪɴ.",
+            "» Batas waktu mencapai 5 menit.\n\nTolong mulai ulang string session dari awal.",
             reply_markup=retry_key,
         )
 
@@ -77,7 +77,7 @@ async def gen_session(
     try:
         api_hash = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text="» Masukkan API HASH kamu :",
+            text="» Masukkan API_HASH kamu :",
             filters=filters.text,
             timeout=300,
         )
@@ -156,7 +156,7 @@ async def gen_session(
     try:
         otp = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
-            text=f"Kirimkan kode OTP yang diterima {phone_number}.\n\Seperti ini <code>12345</code>, dan tolong kirim kode OTP tersebut dengan spasi seperti contoh <code>1 2 3 4 5</code>",
+            text=f"Kirimkan kode OTP yang diterima {phone_number}.\n\Contoh <code>12345</code>. Lalu tolong kirim kode OTP tersebut dengan spasi seperti contoh <code>1 2 3 4 5</code>",
             filters=filters.text,
             timeout=600,
         )
