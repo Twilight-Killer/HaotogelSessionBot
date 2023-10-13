@@ -81,7 +81,7 @@ async def executor(client: Anony, message: Message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {t2-t1} Detik",
+                        callback_data=f"runtime {t2-t1} detik",
                     )
                 ]
             ]
@@ -101,7 +101,7 @@ async def executor(client: Anony, message: Message):
                 [
                     InlineKeyboardButton(
                         text="⏳",
-                        callback_data=f"runtime {round(t2-t1, 3)} Detik",
+                        callback_data=f"runtime {round(t2-t1, 3)} detik",
                     ),
                     InlineKeyboardButton(
                         text="🗑",
